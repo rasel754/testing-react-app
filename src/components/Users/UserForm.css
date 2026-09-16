@@ -1,0 +1,253 @@
+.form-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.user-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+  letter-spacing: 0.02em;
+}
+
+@media (prefers-color-scheme: dark) {
+  .form-group label {
+    color: #cbd5e1;
+  }
+}
+
+.form-group input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-family: inherit;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #1e293b;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.form-group input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+  background-color: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  .form-group input {
+    background-color: rgba(15, 23, 42, 0.6);
+    border-color: rgba(255, 255, 255, 0.12);
+    color: #f8fafc;
+  }
+
+  .form-group input:focus {
+    border-color: #818cf8;
+    box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.25);
+    background-color: rgba(15, 23, 42, 0.9);
+  }
+}
+
+.submit-btn {
+  margin-top: 4px;
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #4f46e5, #4338ca);
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.45);
+  transform: translateY(-1px);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(99, 102, 241, 0.2);
+}
+
+/* List section */
+.list-container {
+  border-top: 1px solid rgba(226, 232, 240, 0.8);
+  padding-top: 20px;
+  text-align: left;
+  width: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+  .list-container {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+.list-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #334155;
+  margin: 0 0 12px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .list-title {
+    color: #e2e8f0;
+  }
+}
+
+.empty-message {
+  font-size: 13px;
+  color: #94a3b8;
+  text-align: center;
+  margin: 12px 0;
+  font-style: italic;
+}
+
+.user-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.user-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background: rgba(248, 250, 252, 0.8);
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  animation: itemSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  .user-item {
+    background: rgba(30, 41, 59, 0.5);
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+}
+
+.user-item:hover {
+  background: rgba(241, 245, 249, 1);
+  transform: translateX(2px);
+}
+
+@media (prefers-color-scheme: dark) {
+  .user-item:hover {
+    background: rgba(51, 65, 85, 0.6);
+  }
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(99, 102, 241, 0.25);
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-width: 0;
+  gap: 2px;
+}
+
+.user-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f172a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (prefers-color-scheme: dark) {
+  .user-name {
+    color: #f1f5f9;
+  }
+}
+
+.user-email {
+  font-size: 12px;
+  color: #64748b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (prefers-color-scheme: dark) {
+  .user-email {
+    color: #94a3b8;
+  }
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  line-height: 1;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.delete-btn:hover {
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+}
+
+@keyframes itemSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
