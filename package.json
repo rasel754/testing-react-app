@@ -8,9 +8,10 @@
     "build": "vite build",
     "lint": "oxlint",
     "preview": "vite preview",
-    "test": "vitest --reporter verbose" 
+    "test": "vitest --reporter verbose"
   },
   "dependencies": {
+    "@testing-library/user-event": "^14.6.7",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "typescript": "^7.0.2"

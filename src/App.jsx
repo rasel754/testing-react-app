@@ -2,6 +2,8 @@ import './App.css'
 import UserForm from './components/Users/UserForm'
 import FruitList from './components/Fruits/FruitList'
 import UserTable, { dummyUsers } from './components/userTable/UserTable'
+import UserEvent from './components/userEvent/UserEvent'
+import Form from './components/form/Form'
 
 function App() {
   // here is comment for safe my stack 
@@ -14,6 +16,8 @@ function App() {
         <UserForm />
         <FruitList />
         <UserTable users={dummyUsers} />
+        <UserEvent />
+        <Form />
       </div>
     </div>
   )
